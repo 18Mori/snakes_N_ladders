@@ -205,7 +205,7 @@ class SnakeLadderGame(tk.Tk):
         self._draw_game_board()
         self._draw_snakes_ladders()
         self._place_players()
-        self._show_message(f"Game started! {self.players[0].name} goes first. Roll the dice!")
+        self._show_message(f"{self.players[0].name} goes 1st. Roll the dice!")
 
     def _create_game_interface(self):
         game_frame = tk.Frame(self, bg="#E3F2FD")
@@ -312,7 +312,7 @@ class SnakeLadderGame(tk.Tk):
             ex, ey = self._get_square_center(end)
             self.board_canvas.create_line(
                 sx, sy, ex, ey,
-                fill="#388E3C",
+                fill="#2338A3",
                 width=4,
                 arrow=tk.LAST,
                 arrowshape=(12, 15, 6)
@@ -321,7 +321,7 @@ class SnakeLadderGame(tk.Tk):
             self.board_canvas.create_text(
                 sx, sy - 15,
                 text="LADDER",
-                fill="#1B5E20",
+                fill="#2338A3",
                 font=("Arial", 8, "bold")
             )
 
@@ -331,7 +331,7 @@ class SnakeLadderGame(tk.Tk):
             ex, ey = self._get_square_center(end)
             self.board_canvas.create_line(
                 sx, sy, ex, ey,
-                fill="#D32F2F",  
+                fill="#1B5E20",  
                 width=4,
                 arrow=tk.LAST,
                 arrowshape=(32, 15, 6),
@@ -341,7 +341,7 @@ class SnakeLadderGame(tk.Tk):
             self.board_canvas.create_text(
                 sx, sy + 15,
                 text="SNAKE",
-                fill="#B71C1C",
+                fill="#1B5E20",
                 font=("Arial", 8, "bold")
             )
 
